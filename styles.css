@@ -473,10 +473,6 @@ footer a:hover {
         transition: 1s;
     }
 
-    header {
-        width: 100%;
-    }
-
     h2 {
         font-size: 30px;
     }
@@ -552,6 +548,10 @@ footer a:hover {
      .design {
         flex-direction: column;
         text-align: center;
+     }
+
+     .design img {
+        max-width: 100%;
      }
 
      .design article {
