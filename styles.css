@@ -85,11 +85,25 @@ header div {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 header button:first-of-type {
     background-color: transparent;
     color: #4CAF4F;
+}
+
+header article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    display: none;
+}
+
+header article section {
+    width: 40px;
+    background-color: #4D4D4D;
+    height: 3px;
 }
 
 main {
@@ -441,4 +455,155 @@ footer a {
 footer a:hover {
     color: #4CAF4F;
     transform: translateX(10px);
+}
+
+@media (max-width: 800px) {
+
+    header nav {
+        display: none;
+        position: fixed;
+        top: 145px;
+        width: 100%;
+        right: 0;
+        padding: 50px;
+        background-color: #F5F7FA;
+        flex-direction: column;
+        margin-top: -90px;
+        right: -100%;
+        transition: 1s;
+    }
+
+    header {
+        width: 100vw;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    header div {
+        display: none;
+    }
+
+    header article {
+        display: flex;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    main article {
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 40px;
+     }
+
+     .client img {
+        max-width: 7%;
+     }
+
+     .community {
+        padding: 10%;
+     }
+
+     .community  article {
+        flex-wrap: wrap;
+     }
+
+     .pixelgrade {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+     }
+     
+     .pixelgrade article {
+        align-items: center;
+     }
+
+     .help {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+     }
+
+     .help article:last-of-type {
+        margin-top: 50px;
+        min-width: 100%;
+        display: flex;
+     }
+
+     .help article section {
+        max-width: 30%;
+        margin: 20px;
+     }
+
+     .design {
+        flex-direction: column;
+        text-align: center;
+     }
+
+     .design article {
+        align-items: center;
+        max-width: 80%;
+     }
+
+     .customer {
+        flex-direction: column;
+        align-items: center;
+        padding: 15%;
+     }
+
+     .customer article {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+     }
+
+     .marketing {
+        padding: 15%;
+     }
+
+     .marketing article {
+        flex-direction: column;
+     }
+
+     .marketing article div {
+        max-height: 60%;
+     }
+
+     .marketing article div h4 {
+        font-size: 10px;
+     }
+
+     .marketing article div strong {
+        font-size: 10px;
+     }
+
+     .marketing article section {
+        max-width: 80%;
+        margin-bottom: 50px;
+     }
+
+     footer {
+        flex-direction: column;
+        align-items: start;
+        gap: 60px;
+     }
+
+     footer article:last-of-type {
+        width: 80%;
+     }
+
 }
